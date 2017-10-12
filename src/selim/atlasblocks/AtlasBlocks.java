@@ -46,7 +46,7 @@ public class AtlasBlocks extends JavaPlugin implements Listener {
 		for (String c : cmds) {
 			int num = Integer.valueOf(c.substring(0, c.indexOf(';')));
 			String cmd = c.substring(c.indexOf(';') + 1);
-			boolean isConsole = cmd.equalsIgnoreCase("c");
+			boolean isConsole = cmd.startsWith("c;");
 			if (isConsole)
 				cmd = c.substring(c.lastIndexOf(';') + 1);
 			COMMANDS.add(new ExecuteCommand(num, cmd, isConsole));

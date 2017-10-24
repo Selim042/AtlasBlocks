@@ -119,7 +119,7 @@ public class AtlasBlocks extends JavaPlugin implements Listener {
 		BLOCK_BREAKS.put(pUUID, breaks);
 		for (ExecuteCommand cmd : COMMANDS)
 			if (cmd.getNumBlocks() == breaks)
-				cmd.execute(p);
+				cmd.execute(p, p);
 	}
 
 	private void createConfig() {

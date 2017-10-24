@@ -23,11 +23,12 @@ public class ExecuteCommand {
 		return this.numBlocks;
 	}
 
-	public void execute(Player player) {
+	public void execute(Player target, Player sender) {
+		cmd.replace("{{PLAYER}}", target.getName());
 		if (isConsole)
 			Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), cmd);
 		else
-			player.performCommand(cmd);
+			sender.performCommand(cmd);
 	}
 
 }
